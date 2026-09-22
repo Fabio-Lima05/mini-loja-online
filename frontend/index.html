@@ -1,32 +1,76 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mini Loja Online</title>
-</head>
 
+    <meta charset="UTF-8">
+    <title>Mini Loja Online</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
 
 <body>
 
-    <h1>Mini Loja Online</h1> 
+    <h1>Mini Loja Online</h1>
 
-   <h2>Clientes Cadastrados</h2>
+    <div class="card">
+        <h2>Clientes Cadastrados</h2>
 
-<ul id="lista-clientes"></ul>
+        <ul id="lista-clientes"></ul>
 
-<label>Nome:</label>
-<input type="text" id="nome">
+        <label>Nome:</label>
+        <input type="text" id="nome">
 
-<br><br>
+        <br><br>
 
-<label>Email:</label>
-<input type="email" id="email">
+        <label>Email:</label>
+        <input type="email" id="email">
 
+        <br><br>
 
-<br><br>
+        <button onclick="cadastrarCliente()">Cadastrar</button>
+    </div>
 
-<button onclick="cadastrarCliente()">Cadastrar</button>
+    <div class="card">
+        <h2>Cadastrar Produto</h2>
 
-<script src="app.js"></script>
+        <h3>Produtos Cadastrados</h3>
+
+<ul id="lista-produtos"></ul>
+
+        <label>Nome do produto:</label>
+        <input type="text" id="produto-nome">
+
+        <br><br>
+
+        <label>Preço:</label>
+        <input type="number" id="produto-preco">
+
+        <br><br>
+
+        <label>Estoque:</label>
+        <input type="number" id="produto-estoque">
+
+        <br><br>
+
+        <button onclick="cadastrarProduto()">Cadastrar Produto</button>
+    </div>
+<h2>Fazer Pedido</h2>
+
+<label>ID do cliente:</label>
+<input type="number" id="pedido-cliente">
+
+<label>ID do produto:</label>
+<input type="number" id="pedido-produto">
+
+<label>Quantidade:</label>
+<input type="number" id="pedido-quantidade">
+
+<button onclick="cadastrarPedido()">Fazer Pedido</button>
+
+<h3>Pedidos Cadastrados</h3>
+<ul id="lista-pedidos"></ul>
+
+    <script src="app.js"></script>
 
 </body>
 </html>
