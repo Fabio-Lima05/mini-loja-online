@@ -6,23 +6,20 @@ function cadastrarCliente() {
     alert("O nome não pode ficar vazio");
     return;
     }
-
-    if (email === "") {
+if (email === "") {
     alert("O email não pode ficar vazio");
     return;
-    }
+}
 
-    if (!email.includes("@")) {
-    alert("O email é invalido, faça direito");
+const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+console.log("EMAIL:", email);
+console.log("VALIDO:", emailRegex.test(email));
+
+if (!emailRegex.test(email)) {
+    alert("Digite um email válido");
     return;
-    }
-
-    if (!email.includes(".")) {
-    alert("O email deve conter um '.', repita ");
-    return;
-
-    }
-
+}
    const cliente = {
     nome,
     email
